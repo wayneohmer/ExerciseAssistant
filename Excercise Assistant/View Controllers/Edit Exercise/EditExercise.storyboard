@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LQt-PO-aiU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Exercise-->
+        <scene sceneID="zgJ-tQ-0mQ">
+            <objects>
+                <viewController id="LQt-PO-aiU" customClass="EAEditExerciseViewController" customModule="Excercise_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KgA-ay-fMM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7nQ-wZ-ybF" customClass="EATextField" customModule="Excercise_Assistant" customModuleProvider="target">
+                                <rect key="frame" x="16" y="80" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Chc-gA-dt9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LQt-PO-aiU" id="riR-u3-gK5"/>
+                                </connections>
+                            </textField>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gL5-CS-Gf7">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <connections>
+                                    <segue destination="rnw-iN-csU" kind="embed" identifier="embed" id="EPi-MP-vWd"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7nQ-wZ-ybF" firstAttribute="top" secondItem="vaq-yF-Thx" secondAttribute="top" constant="16" id="36Z-eE-2wd"/>
+                            <constraint firstItem="gL5-CS-Gf7" firstAttribute="top" secondItem="7nQ-wZ-ybF" secondAttribute="bottom" id="Eam-WU-0Gh"/>
+                            <constraint firstItem="gL5-CS-Gf7" firstAttribute="leading" secondItem="vaq-yF-Thx" secondAttribute="leading" id="KPG-lh-9wu"/>
+                            <constraint firstItem="7nQ-wZ-ybF" firstAttribute="leading" secondItem="vaq-yF-Thx" secondAttribute="leading" constant="16" id="QBH-0q-IsW"/>
+                            <constraint firstItem="vaq-yF-Thx" firstAttribute="bottom" secondItem="gL5-CS-Gf7" secondAttribute="bottom" id="dkb-Ae-LoL"/>
+                            <constraint firstItem="vaq-yF-Thx" firstAttribute="trailing" secondItem="gL5-CS-Gf7" secondAttribute="trailing" id="eE5-if-zV6"/>
+                            <constraint firstItem="vaq-yF-Thx" firstAttribute="trailing" secondItem="7nQ-wZ-ybF" secondAttribute="trailing" constant="16" id="oOi-0S-Gam"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vaq-yF-Thx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Exercise" id="JbR-iy-Acn">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Pyd-8a-eFY"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="UXS-Gr-6Mv">
+                                <connections>
+                                    <action selector="saveTouched:" destination="LQt-PO-aiU" id="fZl-lg-hVV"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="4M3-Xd-vJW">
+                                <connections>
+                                    <action selector="deleteTouched:" destination="LQt-PO-aiU" id="4U5-D5-FiG"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameField" destination="7nQ-wZ-ybF" id="d0v-r0-5iI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pz3-8K-4PX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712.8" y="141.67916041979012"/>
+        </scene>
+        <!--Edit Exercise Table View Controller-->
+        <scene sceneID="5xd-IF-oz1">
+            <objects>
+                <tableViewController id="rnw-iN-csU" customClass="EAEditExerciseTableViewController" customModule="Excercise_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CTl-J4-kw4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="oEc-mv-REc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="Y7D-rU-Tuy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7D-rU-Tuy" id="Ym3-hi-Dhk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TBH-DI-b8G">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="82.5"/>
+                                                    <subviews>
+                                                        <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYS-v2-eGr" customClass="EAFieldSwitch" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="26" width="57" height="31"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="55" id="nHo-Mv-LIl"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="switchChanged:" destination="rnw-iN-csU" eventType="valueChanged" id="rlN-Ww-hPx"/>
+                                                            </connections>
+                                                        </switch>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaP-n0-uGc">
+                                                            <rect key="frame" x="71" y="31" width="156" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1:00:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-PG-KDA" customClass="EATextField" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="243" y="26.5" width="100" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="Swe-J9-DOU"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="TBH-DI-b8G" secondAttribute="trailing" constant="16" id="6Uj-wq-AtI"/>
+                                                <constraint firstItem="TBH-DI-b8G" firstAttribute="leading" secondItem="Ym3-hi-Dhk" secondAttribute="leading" constant="16" id="U8T-Y0-1lO"/>
+                                                <constraint firstAttribute="bottom" secondItem="TBH-DI-b8G" secondAttribute="bottom" priority="750" id="qih-as-Ftr"/>
+                                                <constraint firstItem="TBH-DI-b8G" firstAttribute="top" secondItem="Ym3-hi-Dhk" secondAttribute="top" id="tT3-Kf-aZH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="nQJ-ZV-taG">
+                                        <rect key="frame" x="0.0" y="83" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nQJ-ZV-taG" id="gT6-rH-XnE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BbT-f0-GPP">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="82.5"/>
+                                                    <subviews>
+                                                        <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNp-y1-SXo" customClass="EAFieldSwitch" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="26" width="57" height="31"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="55" id="fnz-S9-508"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="switchChanged:" destination="rnw-iN-csU" eventType="valueChanged" id="AZT-8S-91y"/>
+                                                            </connections>
+                                                        </switch>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMU-Xg-Gbs">
+                                                            <rect key="frame" x="71" y="31" width="181" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gle-vS-shf" customClass="EATextField" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="268" y="26.5" width="75" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="75" id="AMu-Is-mlX"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="BbT-f0-GPP" secondAttribute="trailing" constant="16" id="Nwa-lp-9KA"/>
+                                                <constraint firstItem="BbT-f0-GPP" firstAttribute="leading" secondItem="gT6-rH-XnE" secondAttribute="leading" constant="16" id="OnA-Me-BOx"/>
+                                                <constraint firstItem="BbT-f0-GPP" firstAttribute="top" secondItem="gT6-rH-XnE" secondAttribute="top" id="x7J-RH-RAt"/>
+                                                <constraint firstAttribute="bottom" secondItem="BbT-f0-GPP" secondAttribute="bottom" id="zP3-Rm-oSB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="a4U-Yk-4XA">
+                                        <rect key="frame" x="0.0" y="166" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a4U-Yk-4XA" id="sSq-vE-l1d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PKv-ey-yNN">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="82.5"/>
+                                                    <subviews>
+                                                        <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Il-k2-Zll" customClass="EAFieldSwitch" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="26" width="57" height="31"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="55" id="cda-Bd-FJT"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="switchChanged:" destination="rnw-iN-csU" eventType="valueChanged" id="CFW-Q1-a02"/>
+                                                            </connections>
+                                                        </switch>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcz-d7-SZk">
+                                                            <rect key="frame" x="71" y="31" width="181" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="O6w-i7-88x" customClass="EATextField" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="268" y="26.5" width="75" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="75" id="AVz-Kh-yGz"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="PKv-ey-yNN" secondAttribute="trailing" constant="16" id="LEb-dU-PIS"/>
+                                                <constraint firstItem="PKv-ey-yNN" firstAttribute="top" secondItem="sSq-vE-l1d" secondAttribute="top" id="S3C-sx-ZZ8"/>
+                                                <constraint firstAttribute="bottom" secondItem="PKv-ey-yNN" secondAttribute="bottom" id="cCZ-MJ-WMM"/>
+                                                <constraint firstItem="PKv-ey-yNN" firstAttribute="leading" secondItem="sSq-vE-l1d" secondAttribute="leading" constant="16" id="f2T-rz-9Xz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="7OO-YU-OsB">
+                                        <rect key="frame" x="0.0" y="249" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7OO-YU-OsB" id="1Uw-eh-42Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZMO-AQ-YLE">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="82.5"/>
+                                                    <subviews>
+                                                        <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNY-vJ-qRS" customClass="EAFieldSwitch" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="26" width="57" height="31"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="55" id="YgV-kG-1OC"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="switchChanged:" destination="rnw-iN-csU" eventType="valueChanged" id="gJw-yC-XEY"/>
+                                                            </connections>
+                                                        </switch>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb5-02-wU3">
+                                                            <rect key="frame" x="71" y="31" width="181" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mzt-Zf-sNb" customClass="EATextField" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="268" y="26.5" width="75" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="75" id="nCA-ss-wYq"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ZMO-AQ-YLE" secondAttribute="trailing" constant="16" id="Blo-Ag-fuh"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZMO-AQ-YLE" secondAttribute="bottom" id="Hce-kU-e5X"/>
+                                                <constraint firstItem="ZMO-AQ-YLE" firstAttribute="top" secondItem="1Uw-eh-42Y" secondAttribute="top" id="fnb-Ao-9AK"/>
+                                                <constraint firstItem="ZMO-AQ-YLE" firstAttribute="leading" secondItem="1Uw-eh-42Y" secondAttribute="leading" constant="16" id="ueX-Df-Xl4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="rnw-iN-csU" id="9EF-Ba-4yD"/>
+                            <outlet property="delegate" destination="rnw-iN-csU" id="Ahd-uv-gH7"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="repsField" destination="Gle-vS-shf" id="7XV-Ek-moC"/>
+                        <outlet property="repsSwitch" destination="eNp-y1-SXo" id="4mT-Yz-OnN"/>
+                        <outlet property="setsField" destination="mzt-Zf-sNb" id="MPw-cH-Sm9"/>
+                        <outlet property="setsSwitch" destination="WNY-vJ-qRS" id="jxa-Bm-K2C"/>
+                        <outlet property="timeField" destination="Feq-PG-KDA" id="qWF-q2-zyK"/>
+                        <outlet property="timedSwitch" destination="iYS-v2-eGr" id="fwn-xN-g1J"/>
+                        <outlet property="weightField" destination="O6w-i7-88x" id="fIq-qx-J3Z"/>
+                        <outlet property="weightSwitch" destination="3Il-k2-Zll" id="WbB-Iw-RdC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Kg-8E-8zP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ffe-1G-K0I">
+            <objects>
+                <navigationController storyboardIdentifier="noWarn" automaticallyAdjustsScrollViewInsets="NO" id="4NY-Qy-AiR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x0S-2h-DNY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LQt-PO-aiU" kind="relationship" relationship="rootViewController" id="7Kj-4v-kQ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRM-C3-1LV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="142"/>
+        </scene>
+    </scenes>
+</document>

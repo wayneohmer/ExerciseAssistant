@@ -1,24 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zvd-VS-BVL">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Exercise Assisant-->
+        <scene sceneID="dfE-hd-Z6k">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="L9S-yd-evw" customClass="EAMainTableViewController" customModule="Excercise_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YVU-qv-tH5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="Y1v-BX-VZ3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="qcB-LC-7VM" customClass="EAButtonTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qcB-LC-7VM" id="S00-3A-J8Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-LD-291">
+                                                    <rect key="frame" x="36" y="19" width="316" height="37"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RpP-LD-291" secondAttribute="trailing" constant="16" id="KKt-T3-LxN"/>
+                                                <constraint firstItem="RpP-LD-291" firstAttribute="leading" secondItem="S00-3A-J8Q" secondAttribute="leadingMargin" constant="16" id="XjA-No-s4A"/>
+                                                <constraint firstItem="RpP-LD-291" firstAttribute="top" secondItem="S00-3A-J8Q" secondAttribute="topMargin" constant="8" id="aEa-AO-zQn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RpP-LD-291" secondAttribute="bottom" priority="750" constant="8" id="qCY-aK-q6R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="lM9-Ak-UWz" customClass="EAButtonTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="75" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lM9-Ak-UWz" id="AqD-vU-Bhq">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Exercise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqZ-m9-9Nl">
+                                                    <rect key="frame" x="36" y="19" width="316" height="37"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XqZ-m9-9Nl" secondAttribute="trailing" constant="16" id="ccq-5L-ffE"/>
+                                                <constraint firstItem="XqZ-m9-9Nl" firstAttribute="top" secondItem="AqD-vU-Bhq" secondAttribute="topMargin" constant="8" id="e6b-p5-g4U"/>
+                                                <constraint firstItem="XqZ-m9-9Nl" firstAttribute="leading" secondItem="AqD-vU-Bhq" secondAttribute="leadingMargin" constant="16" id="leu-Sr-Uxh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XqZ-m9-9Nl" secondAttribute="bottom" priority="750" constant="8" id="xlm-zB-PlX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="g60-vJ-hr9" kind="show" identifier="startExercise" id="zgy-D3-ofy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="J0b-uv-28p" customClass="EAButtonTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="150" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J0b-uv-28p" id="cLq-xa-4Lh">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57X-f9-7gd">
+                                                    <rect key="frame" x="36" y="19" width="316" height="37"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="57X-f9-7gd" secondAttribute="bottom" priority="750" constant="8" id="8lX-he-P59"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="57X-f9-7gd" secondAttribute="trailing" constant="16" id="AVM-6b-ctp"/>
+                                                <constraint firstItem="57X-f9-7gd" firstAttribute="top" secondItem="cLq-xa-4Lh" secondAttribute="topMargin" constant="8" id="kdF-6f-s8E"/>
+                                                <constraint firstItem="57X-f9-7gd" firstAttribute="leading" secondItem="cLq-xa-4Lh" secondAttribute="leadingMargin" constant="16" id="ku8-uj-cyW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="rZ2-YL-y5p" kind="show" id="w3Y-RS-ctW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="W3I-Ba-FA1" customClass="EAButtonTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="225" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W3I-Ba-FA1" id="Zs5-zX-gI4">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Exercise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGA-QD-pf0">
+                                                    <rect key="frame" x="36" y="19" width="316" height="37"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rGA-QD-pf0" secondAttribute="bottom" priority="750" constant="8" id="hwa-UQ-s7c"/>
+                                                <constraint firstItem="rGA-QD-pf0" firstAttribute="top" secondItem="Zs5-zX-gI4" secondAttribute="topMargin" constant="8" id="u9h-gB-4ko"/>
+                                                <constraint firstItem="rGA-QD-pf0" firstAttribute="leading" secondItem="Zs5-zX-gI4" secondAttribute="leadingMargin" constant="16" id="ucR-Fq-TGW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rGA-QD-pf0" secondAttribute="trailing" constant="16" id="veo-k3-Cyp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="rJ3-IN-ASi" kind="show" id="6jM-Zg-o6k"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="nRl-27-too" customClass="EAButtonTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="300" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nRl-27-too" id="eBq-xB-6ka">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Exercises" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yU-Dy-eRh">
+                                                    <rect key="frame" x="36" y="19" width="316" height="37"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4yU-Dy-eRh" firstAttribute="top" secondItem="eBq-xB-6ka" secondAttribute="topMargin" constant="8" id="9V7-uB-C4y"/>
+                                                <constraint firstItem="4yU-Dy-eRh" firstAttribute="leading" secondItem="eBq-xB-6ka" secondAttribute="leadingMargin" constant="16" id="G3T-6P-N2b"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4yU-Dy-eRh" secondAttribute="bottom" priority="750" constant="8" id="TVf-Qg-NuQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4yU-Dy-eRh" secondAttribute="trailing" constant="16" id="qeK-gU-nj6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="g60-vJ-hr9" kind="show" id="aZ9-nX-tib"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="L9S-yd-evw" id="BEE-IQ-5bM"/>
+                            <outlet property="delegate" destination="L9S-yd-evw" id="YUB-JD-hvs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Exercise Assisant" id="TjJ-hd-RIA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QQa-wo-iND"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wb0-V7-i2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="474" y="152"/>
+        </scene>
+        <!--Exersices-->
+        <scene sceneID="kZJ-MP-PvP">
+            <objects>
+                <tableViewController id="g60-vJ-hr9" customClass="EAExerciseTableViewController" customModule="Excercise_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XJd-wO-1XX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EAExcerciseTableViewCell" rowHeight="100" id="Ka9-Ec-Jg0" customClass="EAExcerciseTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ka9-Ec-Jg0" id="UgA-J1-dm5">
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53r-ba-odx">
+                                            <rect key="frame" x="36" y="19" width="316" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="sZH-if-a1e"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="53r-ba-odx" secondAttribute="trailing" constant="16" id="92D-DB-o42"/>
+                                        <constraint firstItem="53r-ba-odx" firstAttribute="top" secondItem="UgA-J1-dm5" secondAttribute="topMargin" constant="8" id="P7D-WE-Rho"/>
+                                        <constraint firstItem="53r-ba-odx" firstAttribute="bottom" secondItem="UgA-J1-dm5" secondAttribute="bottomMargin" priority="750" constant="16" id="kC4-oI-zJ0"/>
+                                        <constraint firstItem="53r-ba-odx" firstAttribute="leading" secondItem="UgA-J1-dm5" secondAttribute="leadingMargin" constant="16" id="zBj-DJ-3y9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="53r-ba-odx" id="HPg-EI-nKT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g60-vJ-hr9" id="cfh-uZ-s90"/>
+                            <outlet property="delegate" destination="g60-vJ-hr9" id="X7p-aT-VtN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Exersices" id="waW-jS-VBq">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="SqS-7Q-uRT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oys-wI-aTh">
+                            <connections>
+                                <segue destination="rJ3-IN-ASi" kind="show" id="Jl8-rz-AHG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="21Q-h3-liy" kind="show" identifier="startExercise" id="Wxl-ke-3lr"/>
+                        <segue destination="rJ3-IN-ASi" kind="show" identifier="edit" id="u9g-3e-CYq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Utc-NH-zeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="876"/>
+        </scene>
+        <!--DoExercises-->
+        <scene sceneID="0WU-Aa-WWl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DoExercises" id="21Q-h3-liy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtV-a9-yzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="673"/>
+        </scene>
+        <!--Log-->
+        <scene sceneID="Yqd-aK-RPp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Log" id="rZ2-YL-y5p" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efw-0N-Tdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="-245"/>
+        </scene>
+        <!--EditExercise-->
+        <scene sceneID="4nT-vI-fZf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditExercise" id="rJ3-IN-ASi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Xf-XX-hJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1399" y="-47"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bh4-0q-pCC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zvd-VS-BVL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="RPE-DY-W5E">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L9S-yd-evw" kind="relationship" relationship="rootViewController" id="HVs-B7-8BY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lz5-FL-y3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304" y="127"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="u9g-3e-CYq"/>
+        <segue reference="aZ9-nX-tib"/>
+    </inferredMetricsTieBreakers>
 </document>

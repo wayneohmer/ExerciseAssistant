@@ -13,9 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if let dataDict = UserDefaults.standard.object(forKey: "exerciseData") as? [String:Data] {
+            for (key,data) in dataDict {
+                if let exercise = EAExercise.decodeData(data:data) {
+                    EAExercise.sharedExercises[key] = exercise
+                }
+            }
+        }
+        
+        if let data = UserDefaults.standard.object(forKey: "exerciseLog") as? Data {
+            if let log = try? JSONDecoder().decode(EALog.self, from: data) {
+                EALog.sharedLog = log
+            }
+        }
+        
         return true
     }
 
