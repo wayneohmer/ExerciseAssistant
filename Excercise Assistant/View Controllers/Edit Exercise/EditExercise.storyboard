@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LQt-PO-aiU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LQt-PO-aiU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,6 +67,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameField" destination="7nQ-wZ-ybF" id="d0v-r0-5iI"/>
+                        <segue destination="fgr-OJ-dDK" kind="show" identifier="SpeakTimes" id="UgV-uL-7Cs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pz3-8K-4PX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,18 +85,18 @@
                         <sections>
                             <tableViewSection id="oEc-mv-REc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="Y7D-rU-Tuy">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Y7D-rU-Tuy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7D-rU-Tuy" id="Ym3-hi-Dhk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TBH-DI-b8G">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="82.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="80"/>
                                                     <subviews>
                                                         <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYS-v2-eGr" customClass="EAFieldSwitch" customModule="Excercise_Assistant" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="26" width="57" height="31"/>
+                                                            <rect key="frame" x="0.0" y="24.5" width="57" height="31"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="55" id="nHo-Mv-LIl"/>
                                                             </constraints>
@@ -104,19 +105,25 @@
                                                             </connections>
                                                         </switch>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaP-n0-uGc">
-                                                            <rect key="frame" x="71" y="31" width="156" height="20.5"/>
+                                                            <rect key="frame" x="71" y="30" width="156" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1:00:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-PG-KDA" customClass="EATextField" customModule="Excercise_Assistant" customModuleProvider="target">
-                                                            <rect key="frame" x="243" y="26.5" width="100" height="30"/>
+                                                            <rect key="frame" x="243" y="25" width="100" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="Swe-J9-DOU"/>
                                                             </constraints>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isTime" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="rnw-iN-csU" id="HYY-is-0x9"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -130,8 +137,76 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="3re-Sb-vT7">
+                                        <rect key="frame" x="0.0" y="80" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3re-Sb-vT7" id="eO2-GF-dPK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-sD-gLb">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="82.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speak Every" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1n-aY-Jop">
+                                                            <rect key="frame" x="0.0" y="31" width="227" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1:00:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rp3-A2-YbG" customClass="EATextField" customModule="Excercise_Assistant" customModuleProvider="target">
+                                                            <rect key="frame" x="243" y="26.5" width="100" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="4ff-5Q-wSA"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isTime" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="rnw-iN-csU" id="CpO-rj-IAS"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bKJ-sD-gLb" firstAttribute="leading" secondItem="eO2-GF-dPK" secondAttribute="leading" constant="16" id="9V4-jA-gbg"/>
+                                                <constraint firstAttribute="bottom" secondItem="bKJ-sD-gLb" secondAttribute="bottom" id="OmO-a9-5RC"/>
+                                                <constraint firstAttribute="trailing" secondItem="bKJ-sD-gLb" secondAttribute="trailing" constant="16" id="eJX-ED-qnB"/>
+                                                <constraint firstItem="bKJ-sD-gLb" firstAttribute="top" secondItem="eO2-GF-dPK" secondAttribute="top" id="fmN-R6-Ski"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="68U-fg-dga">
+                                        <rect key="frame" x="0.0" y="163" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="68U-fg-dga" id="LmI-ZV-K6y">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tl-ls-MEO">
+                                                    <rect key="frame" x="127" y="23.5" width="121" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <state key="normal" title="Speak Times">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="speakTimesToched" destination="rnw-iN-csU" eventType="touchUpInside" id="jgN-4r-2PK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Tl-ls-MEO" firstAttribute="centerY" secondItem="LmI-ZV-K6y" secondAttribute="centerY" id="aQs-KH-NY3"/>
+                                                <constraint firstItem="1Tl-ls-MEO" firstAttribute="centerX" secondItem="LmI-ZV-K6y" secondAttribute="centerX" id="ejv-wx-fQ2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="nQJ-ZV-taG">
-                                        <rect key="frame" x="0.0" y="83" width="375" height="83"/>
+                                        <rect key="frame" x="0.0" y="246" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nQJ-ZV-taG" id="gT6-rH-XnE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
@@ -177,7 +252,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="a4U-Yk-4XA">
-                                        <rect key="frame" x="0.0" y="166" width="375" height="83"/>
+                                        <rect key="frame" x="0.0" y="329" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a4U-Yk-4XA" id="sSq-vE-l1d">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
@@ -223,7 +298,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="7OO-YU-OsB">
-                                        <rect key="frame" x="0.0" y="249" width="375" height="83"/>
+                                        <rect key="frame" x="0.0" y="412" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7OO-YU-OsB" id="1Uw-eh-42Y">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
@@ -281,6 +356,9 @@
                         <outlet property="repsSwitch" destination="eNp-y1-SXo" id="4mT-Yz-OnN"/>
                         <outlet property="setsField" destination="mzt-Zf-sNb" id="MPw-cH-Sm9"/>
                         <outlet property="setsSwitch" destination="WNY-vJ-qRS" id="jxa-Bm-K2C"/>
+                        <outlet property="speakEveryCell" destination="3re-Sb-vT7" id="9E0-b5-YhE"/>
+                        <outlet property="speakEveryField" destination="Rp3-A2-YbG" id="4Do-Bs-Rdr"/>
+                        <outlet property="speakTimesCell" destination="68U-fg-dga" id="w0k-gU-tBp"/>
                         <outlet property="timeField" destination="Feq-PG-KDA" id="qWF-q2-zyK"/>
                         <outlet property="timedSwitch" destination="iYS-v2-eGr" id="fwn-xN-g1J"/>
                         <outlet property="weightField" destination="O6w-i7-88x" id="fIq-qx-J3Z"/>
@@ -308,6 +386,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRM-C3-1LV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="988" y="142"/>
+        </scene>
+        <!--Speak Times-->
+        <scene sceneID="OQN-Ug-KXw">
+            <objects>
+                <collectionViewController id="fgr-OJ-dDK" customClass="EASSpeakTimesController" customModule="Excercise_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yzA-Xr-JNN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="Xff-Ss-aHx">
+                            <size key="itemSize" width="47" height="43"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EASpeakTimesCell" id="G0s-B3-3xA" customClass="EASpeakTimesCell" customModule="Excercise_Assistant" customModuleProvider="target">
+                                <rect key="frame" x="5" y="5" width="47" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="47" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ms-Q0-4qd">
+                                            <rect key="frame" x="0.0" y="0.0" width="47" height="43"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8Ms-Q0-4qd" secondAttribute="bottom" id="SMZ-S9-5Df"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ms-Q0-4qd" secondAttribute="trailing" id="Zub-mX-TlJ"/>
+                                    <constraint firstItem="8Ms-Q0-4qd" firstAttribute="leading" secondItem="G0s-B3-3xA" secondAttribute="leading" id="mXO-Ah-j1g"/>
+                                    <constraint firstItem="8Ms-Q0-4qd" firstAttribute="top" secondItem="G0s-B3-3xA" secondAttribute="top" id="pF1-QW-d0i"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="numberLabel" destination="8Ms-Q0-4qd" id="fts-8E-dUk"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="fgr-OJ-dDK" id="ggb-Qk-IMw"/>
+                            <outlet property="delegate" destination="fgr-OJ-dDK" id="eW1-OH-QvI"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Speak Times" id="094-tJ-yia">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5mr-Db-14K">
+                            <connections>
+                                <segue destination="gvX-f3-qio" kind="unwind" unwindAction="prepareForUnwindWithSegue:" id="sA2-MC-dXq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmg-os-tAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gvX-f3-qio" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="867"/>
         </scene>
     </scenes>
 </document>

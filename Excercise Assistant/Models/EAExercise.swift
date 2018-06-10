@@ -12,7 +12,27 @@ class EAExercise: Encodable, Decodable {
     
     var name = ""
     var isTimed = false
-    var time = EATime(hours: 0,min: 0,sec: 0)
+    var time = EATime(hours: 0, min: 0, sec: 0)
+    var speakEvery = EATime(hours: 0, min: 0, sec: 0) {
+        didSet {
+            if oldValue.absoluteSec > 0 {
+                for second in stride(from: time.absoluteSec, to: oldValue.absoluteSec-1, by: -oldValue.absoluteSec) {
+                    var thisTime = EATime()
+                    thisTime.absoluteSec = second
+                    self.spokenTimes.remove(thisTime)
+                }
+            }
+            if self.speakEvery.absoluteSec > 0 {
+                for second in stride(from: time.absoluteSec, to: self.speakEvery.absoluteSec-1, by: -self.speakEvery.absoluteSec) {
+                    var thisTime = EATime()
+                    thisTime.absoluteSec = second
+                    self.spokenTimes.insert(thisTime)
+                }
+            }
+            
+        }
+    }
+    var spokenTimes:Set<EATime> = []
     var hasReps = false
     var reps = Int(0)
     var hasWeight = false

@@ -8,20 +8,64 @@
 
 /* Begin PBXBuildFile section */
 		2B0653042079453400A56A79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0653032079453400A56A79 /* AppDelegate.swift */; };
-		2B0653062079453400A56A79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0653052079453400A56A79 /* ViewController.swift */; };
 		2B0653092079453400A56A79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0653072079453400A56A79 /* Main.storyboard */; };
 		2B06530B2079453400A56A79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B06530A2079453400A56A79 /* Assets.xcassets */; };
 		2B06530E2079453400A56A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B06530C2079453400A56A79 /* LaunchScreen.storyboard */; };
+		2B06531620794B9200A56A79 /* EAExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B06531520794B9200A56A79 /* EAExercise.swift */; };
+		2B06531A207950FC00A56A79 /* EAEditExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B065319207950FC00A56A79 /* EAEditExerciseViewController.swift */; };
+		2B06531E207952D600A56A79 /* EAFieldSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B06531D207952D600A56A79 /* EAFieldSwitch.swift */; };
+		2B06532020795ECD00A56A79 /* EAExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B06531F20795ECD00A56A79 /* EAExerciseTableViewController.swift */; };
+		2B06532220795EE700A56A79 /* EAExcerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B06532120795EE700A56A79 /* EAExcerciseTableViewCell.swift */; };
+		2B065324207984F600A56A79 /* EAStartExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B065323207984F600A56A79 /* EAStartExerciseViewController.swift */; };
+		2B065326207985EA00A56A79 /* EAStartExerciesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B065325207985EA00A56A79 /* EAStartExerciesTableViewController.swift */; };
+		2B065328207A9AF500A56A79 /* EAMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B065327207A9AF500A56A79 /* EAMainTableViewController.swift */; };
+		2B06532A207A9EB600A56A79 /* EAButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B065329207A9EB600A56A79 /* EAButtonTableViewCell.swift */; };
+		2B06532C207AA67E00A56A79 /* EAEditExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B06532B207AA67E00A56A79 /* EAEditExerciseTableViewController.swift */; };
+		2B6EFFFB208D16C500097506 /* EASpeakTimesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EFFF9208D16C500097506 /* EASpeakTimesCell.swift */; };
+		2B6EFFFC208D16C500097506 /* EASpeakTimesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EFFFA208D16C500097506 /* EASpeakTimesController.swift */; };
+		2BC525BD207AAB7B00160857 /* EATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC525BC207AAB7B00160857 /* EATextField.swift */; };
+		2BC525BF207AB84300160857 /* EATime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC525BE207AB84300160857 /* EATime.swift */; };
+		2BC525C2207AC59700160857 /* EALogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC525C1207AC59700160857 /* EALogEntry.swift */; };
+		2BC525C4207AC61400160857 /* EALog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC525C3207AC61400160857 /* EALog.swift */; };
+		2BC525C6207AC72D00160857 /* DoExercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC525C5207AC72D00160857 /* DoExercises.storyboard */; };
+		2BC525C8207AD5FC00160857 /* Log.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC525C7207AD5FC00160857 /* Log.storyboard */; };
+		2BC525CA207AD77800160857 /* EALogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC525C9207AD77800160857 /* EALogTableViewController.swift */; };
+		2BC525CD207AD7BC00160857 /* EALogEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC525CC207AD7BC00160857 /* EALogEntryCell.swift */; };
+		2BC525CF207AD90600160857 /* EADateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC525CE207AD90600160857 /* EADateExtensions.swift */; };
+		2BC525D1207ADFC900160857 /* EditExercise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC525D0207ADFC900160857 /* EditExercise.storyboard */; };
+		2BC525D3207AE2C900160857 /* EATimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC525D2207AE2C900160857 /* EATimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B0653002079453400A56A79 /* Excercise Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Excercise Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0653032079453400A56A79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B0653052079453400A56A79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2B0653082079453400A56A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B06530A2079453400A56A79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B06530D2079453400A56A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B06530F2079453400A56A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B06531520794B9200A56A79 /* EAExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAExercise.swift; sourceTree = "<group>"; };
+		2B065319207950FC00A56A79 /* EAEditExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEditExerciseViewController.swift; sourceTree = "<group>"; };
+		2B06531D207952D600A56A79 /* EAFieldSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAFieldSwitch.swift; sourceTree = "<group>"; };
+		2B06531F20795ECD00A56A79 /* EAExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAExerciseTableViewController.swift; sourceTree = "<group>"; };
+		2B06532120795EE700A56A79 /* EAExcerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAExcerciseTableViewCell.swift; sourceTree = "<group>"; };
+		2B065323207984F600A56A79 /* EAStartExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAStartExerciseViewController.swift; sourceTree = "<group>"; };
+		2B065325207985EA00A56A79 /* EAStartExerciesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAStartExerciesTableViewController.swift; sourceTree = "<group>"; };
+		2B065327207A9AF500A56A79 /* EAMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAMainTableViewController.swift; sourceTree = "<group>"; };
+		2B065329207A9EB600A56A79 /* EAButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAButtonTableViewCell.swift; sourceTree = "<group>"; };
+		2B06532B207AA67E00A56A79 /* EAEditExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEditExerciseTableViewController.swift; sourceTree = "<group>"; };
+		2B6EFFF9208D16C500097506 /* EASpeakTimesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EASpeakTimesCell.swift; sourceTree = "<group>"; };
+		2B6EFFFA208D16C500097506 /* EASpeakTimesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EASpeakTimesController.swift; sourceTree = "<group>"; };
+		2BC525BC207AAB7B00160857 /* EATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATextField.swift; sourceTree = "<group>"; };
+		2BC525BE207AB84300160857 /* EATime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATime.swift; sourceTree = "<group>"; };
+		2BC525C1207AC59700160857 /* EALogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EALogEntry.swift; sourceTree = "<group>"; };
+		2BC525C3207AC61400160857 /* EALog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EALog.swift; sourceTree = "<group>"; };
+		2BC525C5207AC72D00160857 /* DoExercises.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoExercises.storyboard; sourceTree = "<group>"; };
+		2BC525C7207AD5FC00160857 /* Log.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Log.storyboard; sourceTree = "<group>"; };
+		2BC525C9207AD77800160857 /* EALogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EALogTableViewController.swift; sourceTree = "<group>"; };
+		2BC525CC207AD7BC00160857 /* EALogEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EALogEntryCell.swift; sourceTree = "<group>"; };
+		2BC525CE207AD90600160857 /* EADateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADateExtensions.swift; sourceTree = "<group>"; };
+		2BC525D0207ADFC900160857 /* EditExercise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditExercise.storyboard; sourceTree = "<group>"; };
+		2BC525D2207AE2C900160857 /* EATimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +98,100 @@
 		2B0653022079453400A56A79 /* Excercise Assistant */ = {
 			isa = PBXGroup;
 			children = (
-				2B0653032079453400A56A79 /* AppDelegate.swift */,
-				2B0653052079453400A56A79 /* ViewController.swift */,
 				2B0653072079453400A56A79 /* Main.storyboard */,
+				2B0653032079453400A56A79 /* AppDelegate.swift */,
+				2B06531B2079527700A56A79 /* View Controllers */,
+				2BC525C0207AC56D00160857 /* Custom Controls */,
+				2B06531C2079528A00A56A79 /* Models */,
 				2B06530A2079453400A56A79 /* Assets.xcassets */,
 				2B06530C2079453400A56A79 /* LaunchScreen.storyboard */,
 				2B06530F2079453400A56A79 /* Info.plist */,
+				2BC525CE207AD90600160857 /* EADateExtensions.swift */,
 			);
 			path = "Excercise Assistant";
+			sourceTree = "<group>";
+		};
+		2B06531B2079527700A56A79 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B065327207A9AF500A56A79 /* EAMainTableViewController.swift */,
+				2B54EB84207AAB0200AF2E83 /* Edit Exercise */,
+				2B54EB83207AAAE600AF2E83 /* Exercise Table */,
+				2BC525BB207AAB2C00160857 /* Start Exercise */,
+				2BC525CB207AD78800160857 /* Log */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2B06531C2079528A00A56A79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BC525BE207AB84300160857 /* EATime.swift */,
+				2B06531520794B9200A56A79 /* EAExercise.swift */,
+				2BC525C1207AC59700160857 /* EALogEntry.swift */,
+				2BC525C3207AC61400160857 /* EALog.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B54EB83207AAAE600AF2E83 /* Exercise Table */ = {
+			isa = PBXGroup;
+			children = (
+				2B06531F20795ECD00A56A79 /* EAExerciseTableViewController.swift */,
+				2B06532120795EE700A56A79 /* EAExcerciseTableViewCell.swift */,
+			);
+			path = "Exercise Table";
+			sourceTree = "<group>";
+		};
+		2B54EB84207AAB0200AF2E83 /* Edit Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				2BC525D0207ADFC900160857 /* EditExercise.storyboard */,
+				2B065329207A9EB600A56A79 /* EAButtonTableViewCell.swift */,
+				2B065319207950FC00A56A79 /* EAEditExerciseViewController.swift */,
+				2B06532B207AA67E00A56A79 /* EAEditExerciseTableViewController.swift */,
+				2B6EFFFD208D16D200097506 /* Speak Times */,
+			);
+			path = "Edit Exercise";
+			sourceTree = "<group>";
+		};
+		2B6EFFFD208D16D200097506 /* Speak Times */ = {
+			isa = PBXGroup;
+			children = (
+				2B6EFFF9208D16C500097506 /* EASpeakTimesCell.swift */,
+				2B6EFFFA208D16C500097506 /* EASpeakTimesController.swift */,
+			);
+			path = "Speak Times";
+			sourceTree = "<group>";
+		};
+		2BC525BB207AAB2C00160857 /* Start Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				2BC525C5207AC72D00160857 /* DoExercises.storyboard */,
+				2B065325207985EA00A56A79 /* EAStartExerciesTableViewController.swift */,
+				2B065323207984F600A56A79 /* EAStartExerciseViewController.swift */,
+				2BC525D2207AE2C900160857 /* EATimerViewController.swift */,
+			);
+			path = "Start Exercise";
+			sourceTree = "<group>";
+		};
+		2BC525C0207AC56D00160857 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				2B06531D207952D600A56A79 /* EAFieldSwitch.swift */,
+				2BC525BC207AAB7B00160857 /* EATextField.swift */,
+			);
+			path = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		2BC525CB207AD78800160857 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				2BC525C7207AD5FC00160857 /* Log.storyboard */,
+				2BC525C9207AD77800160857 /* EALogTableViewController.swift */,
+				2BC525CC207AD7BC00160857 /* EALogEntryCell.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,8 +220,9 @@
 		2B0652F82079453400A56A79 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = EA;
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Wayne Ohmer";
 				TargetAttributes = {
 					2B0652FF2079453400A56A79 = {
@@ -123,9 +254,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC525D1207ADFC900160857 /* EditExercise.storyboard in Resources */,
 				2B06530E2079453400A56A79 /* LaunchScreen.storyboard in Resources */,
 				2B06530B2079453400A56A79 /* Assets.xcassets in Resources */,
 				2B0653092079453400A56A79 /* Main.storyboard in Resources */,
+				2BC525C6207AC72D00160857 /* DoExercises.storyboard in Resources */,
+				2BC525C8207AD5FC00160857 /* Log.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +270,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B0653062079453400A56A79 /* ViewController.swift in Sources */,
+				2B065326207985EA00A56A79 /* EAStartExerciesTableViewController.swift in Sources */,
+				2BC525CF207AD90600160857 /* EADateExtensions.swift in Sources */,
+				2B06532220795EE700A56A79 /* EAExcerciseTableViewCell.swift in Sources */,
+				2BC525CD207AD7BC00160857 /* EALogEntryCell.swift in Sources */,
+				2BC525BF207AB84300160857 /* EATime.swift in Sources */,
+				2B065324207984F600A56A79 /* EAStartExerciseViewController.swift in Sources */,
+				2B06532A207A9EB600A56A79 /* EAButtonTableViewCell.swift in Sources */,
+				2BC525D3207AE2C900160857 /* EATimerViewController.swift in Sources */,
+				2BC525C4207AC61400160857 /* EALog.swift in Sources */,
+				2B06531A207950FC00A56A79 /* EAEditExerciseViewController.swift in Sources */,
 				2B0653042079453400A56A79 /* AppDelegate.swift in Sources */,
+				2BC525CA207AD77800160857 /* EALogTableViewController.swift in Sources */,
+				2B6EFFFB208D16C500097506 /* EASpeakTimesCell.swift in Sources */,
+				2B6EFFFC208D16C500097506 /* EASpeakTimesController.swift in Sources */,
+				2B06532020795ECD00A56A79 /* EAExerciseTableViewController.swift in Sources */,
+				2B06532C207AA67E00A56A79 /* EAEditExerciseTableViewController.swift in Sources */,
+				2B06531E207952D600A56A79 /* EAFieldSwitch.swift in Sources */,
+				2BC525BD207AAB7B00160857 /* EATextField.swift in Sources */,
+				2B065328207A9AF500A56A79 /* EAMainTableViewController.swift in Sources */,
+				2B06531620794B9200A56A79 /* EAExercise.swift in Sources */,
+				2BC525C2207AC59700160857 /* EALogEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +330,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +338,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -211,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -234,6 +389,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +397,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -262,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

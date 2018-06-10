@@ -81,6 +81,7 @@ class EAEditExerciseViewController: UIViewController {
         self.exercise.hasSets = embededViewController.setsSwitch.isOn
         
         self.exercise.time = embededViewController.timeField.storedTime
+        self.exercise.speakEvery = embededViewController.speakEveryField.storedTime
         self.exercise.reps = Int(embededViewController.repsField.text ?? "0") ?? 0
         self.exercise.weight = Int(embededViewController.weightField.text ?? "0") ?? 0
         self.exercise.sets = Int(embededViewController.setsField.text ?? "0") ?? 0
@@ -93,6 +94,10 @@ class EAEditExerciseViewController: UIViewController {
             self.embededViewController = segue.destination as! EAEditExerciseTableViewController
             self.embededViewController.exercise = self.exercise
             self.embededViewController.isNew = self.isNew
+        } else if segue.identifier == "SpeakTimes" {
+            let vc = segue.destination as! EASSpeakTimesController
+            self.updateExercise()
+            vc.exercise = self.exercise
         }
     }
 }

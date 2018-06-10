@@ -33,6 +33,7 @@ class EAStartExerciseViewController: UIViewController {
             self.embededVC.exercise = self.exercise
         } else if segue.identifier == "showTimer" {
             let vc = segue.destination as! EATimerViewController
+            vc.exercise = self.exercise
             vc.time = self.embededVC.timeField.storedTime
         }
     }

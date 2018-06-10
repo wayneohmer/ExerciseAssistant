@@ -18,10 +18,6 @@ class EASSpeakTimesController: UICollectionViewController {
         super.viewDidLoad()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: UICollectionViewDataSource
 
@@ -38,7 +34,9 @@ class EASSpeakTimesController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! EASpeakTimesCell
     
         cell.numberLabel.text = "\(indexPath.item)"
-        if  self.exercise.spokenTimes.contains(indexPath.item) {
+        var thisTime = EATime()
+        thisTime.absoluteSec = indexPath.item
+        if  self.exercise.spokenTimes.contains(thisTime) {
             cell.numberLabel.backgroundColor = UIColor.white
             cell.numberLabel.textColor = UIColor.black
         } else {
@@ -50,10 +48,12 @@ class EASSpeakTimesController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if self.exercise.spokenTimes.contains(indexPath.item) {
-            self.exercise.spokenTimes.remove(indexPath.item)
+        var thisTime = EATime()
+        thisTime.absoluteSec = indexPath.item
+        if self.exercise.spokenTimes.contains(thisTime) {
+            self.exercise.spokenTimes.remove(thisTime)
         } else {
-            exercise.spokenTimes.update(with: indexPath.item)
+            exercise.spokenTimes.update(with: thisTime)
         }
         self.collectionView?.reloadData()
     }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zvd-VS-BVL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e73-BZ-kM5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <tableViewController id="L9S-yd-evw" customClass="EAMainTableViewController" customModule="Excercise_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YVU-qv-tH5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -70,34 +70,8 @@
                                             <segue destination="g60-vJ-hr9" kind="show" identifier="startExercise" id="zgy-D3-ofy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="J0b-uv-28p" customClass="EAButtonTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="150" width="414" height="75"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J0b-uv-28p" id="cLq-xa-4Lh">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="75"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57X-f9-7gd">
-                                                    <rect key="frame" x="36" y="19" width="316" height="37"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="57X-f9-7gd" secondAttribute="bottom" priority="750" constant="8" id="8lX-he-P59"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="57X-f9-7gd" secondAttribute="trailing" constant="16" id="AVM-6b-ctp"/>
-                                                <constraint firstItem="57X-f9-7gd" firstAttribute="top" secondItem="cLq-xa-4Lh" secondAttribute="topMargin" constant="8" id="kdF-6f-s8E"/>
-                                                <constraint firstItem="57X-f9-7gd" firstAttribute="leading" secondItem="cLq-xa-4Lh" secondAttribute="leadingMargin" constant="16" id="ku8-uj-cyW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <segue destination="rZ2-YL-y5p" kind="show" id="w3Y-RS-ctW"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="W3I-Ba-FA1" customClass="EAButtonTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="225" width="414" height="75"/>
+                                        <rect key="frame" x="0.0" y="150" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W3I-Ba-FA1" id="Zs5-zX-gI4">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="75"/>
@@ -123,7 +97,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="75" id="nRl-27-too" customClass="EAButtonTableViewCell" customModule="Excercise_Assistant" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="300" width="414" height="75"/>
+                                        <rect key="frame" x="0.0" y="225" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nRl-27-too" id="eBq-xB-6ka">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="75"/>
@@ -162,14 +136,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wb0-V7-i2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="152"/>
+            <point key="canvasLocation" x="1376.8115942028987" y="137.77173913043478"/>
         </scene>
         <!--Exersices-->
         <scene sceneID="kZJ-MP-PvP">
             <objects>
                 <tableViewController id="g60-vJ-hr9" customClass="EAExerciseTableViewController" customModule="Excercise_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XJd-wO-1XX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -185,7 +159,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="sZH-if-a1e"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -223,7 +197,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Utc-NH-zeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455" y="876"/>
+            <point key="canvasLocation" x="568" y="873"/>
         </scene>
         <!--DoExercises-->
         <scene sceneID="0WU-Aa-WWl">
@@ -236,7 +210,9 @@
         <!--Log-->
         <scene sceneID="Yqd-aK-RPp">
             <objects>
-                <viewControllerPlaceholder storyboardName="Log" id="rZ2-YL-y5p" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Log" id="rZ2-YL-y5p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="KPe-gR-Ihz"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efw-0N-Tdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1102" y="-245"/>
@@ -247,12 +223,15 @@
                 <viewControllerPlaceholder storyboardName="EditExercise" id="rJ3-IN-ASi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xf-XX-hJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399" y="-47"/>
+            <point key="canvasLocation" x="2305.072463768116" y="-47.282608695652179"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Workout-->
         <scene sceneID="bh4-0q-pCC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zvd-VS-BVL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workout" id="xew-JQ-KCg">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="RPE-DY-W5E">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -273,11 +252,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lz5-FL-y3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-304" y="127"/>
+            <point key="canvasLocation" x="603" y="137"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iCZ-Dt-XfF">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e73-BZ-kM5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="rt6-3X-NUP">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zvd-VS-BVL" kind="relationship" relationship="viewControllers" id="Tyj-g4-qFe"/>
+                        <segue destination="rZ2-YL-y5p" kind="relationship" relationship="viewControllers" id="d5d-3G-HOR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUY-cI-Cdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304.34782608695656" y="126.35869565217392"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="u9g-3e-CYq"/>
+        <segue reference="6jM-Zg-o6k"/>
         <segue reference="aZ9-nX-tib"/>
     </inferredMetricsTieBreakers>
 </document>

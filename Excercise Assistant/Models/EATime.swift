@@ -8,11 +8,24 @@
 
 import UIKit
 
-struct EATime: Encodable, Decodable  {
+struct EATime: Encodable, Decodable, Comparable, Hashable {
     
     var hours = Int(0)
     var min = Int(0)
     var sec = Int(0)
+    
+    var absoluteSec:Int {
+        
+        set {
+            self.hours = newValue/3600
+            let remaining = newValue%3600
+            self.min = remaining/60
+            self.sec = remaining%60
+        }
+        get {
+            return (self.hours*3600) + (self.min*60) + self.sec
+        }
+    }
 
     var displaySting:String  {
         get {
@@ -24,6 +37,18 @@ struct EATime: Encodable, Decodable  {
                 return sec > 0 ? "\(sec)" : ""
             }
         }
+    }
+    
+    var hashValue: Int {
+        return absoluteSec
+    }
+    
+    static func == (lhs: EATime, rhs: EATime) -> Bool {
+        return lhs.absoluteSec == rhs.absoluteSec
+    }
+    
+    static func < (lhs: EATime, rhs: EATime) -> Bool {
+        return lhs.absoluteSec < rhs.absoluteSec
     }
     
 }

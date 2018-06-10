@@ -8,13 +8,17 @@
 
 import UIKit
 
-class EAEditExerciseTableViewController: UITableViewController {
+class EAEditExerciseTableViewController: UITableViewController, UITextFieldDelegate {
     
     var isNew = true
     var exercise = EAExercise()
 
+    @IBOutlet var speakTimesCell: UITableViewCell!
+    @IBOutlet var speakEveryCell: UITableViewCell!
+    
     @IBOutlet var timedSwitch: EAFieldSwitch!
     @IBOutlet var timeField: EATextField!
+    @IBOutlet var speakEveryField: EATextField!
     
     @IBOutlet var repsSwitch: EAFieldSwitch!
     @IBOutlet var repsField: EATextField!
@@ -41,6 +45,7 @@ class EAEditExerciseTableViewController: UITableViewController {
             self.setsSwitch.isOn = false
             
             self.timeField.text = ""
+            self.speakEveryField.text = ""
             self.repsField.text = ""
             self.weightField.text = ""
             self.setsField.text = ""
@@ -52,11 +57,18 @@ class EAEditExerciseTableViewController: UITableViewController {
             self.setsSwitch.isOn = self.exercise.hasSets
             
             self.timeField.text = self.exercise.time.displaySting
+            self.speakEveryField.text = self.exercise.speakEvery.displaySting
             self.timeField.storedTime = self.exercise.time
+            self.speakEveryField.storedTime = self.exercise.speakEvery
+            self.speakEveryField.maxTime = self.exercise.time
+
             self.repsField.text = "\(self.exercise.reps)"
             self.weightField.text = "\(self.exercise.weight)"
             self.setsField.text = "\(self.exercise.sets)"
             
+            self.speakEveryCell.isHidden = !self.timedSwitch.isOn
+            self.speakTimesCell.isHidden = !self.timedSwitch.isOn
+
         }
 
     }
@@ -70,7 +82,32 @@ class EAEditExerciseTableViewController: UITableViewController {
         } else {
             textField.resignFirstResponder()
         }
+        if sender == self.timedSwitch {
+            self.speakEveryCell.isHidden = !self.timedSwitch.isOn
+            self.speakTimesCell.isHidden = !self.timedSwitch.isOn
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.timeField {
+            self.speakEveryField.maxTime = self.timeField.storedTime
+        }
+    }
+    
+    @IBAction func speakTimesToched() {
+        if let vc = self.parent as? EAEditExerciseViewController {
+            vc.performSegue(withIdentifier: "SpeakTimes", sender: nil)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        
+        return cell.isHidden ? 0 : 80
+    }
+
 
 }

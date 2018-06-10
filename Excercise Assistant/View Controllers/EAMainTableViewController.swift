@@ -13,7 +13,9 @@ class EAMainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-        
+        self.tabBarController?.tabBar.tintColor = UIColor.black
+        self.tabBarController?.tabBar.unselectedItemTintColor = UIColor.darkGray
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

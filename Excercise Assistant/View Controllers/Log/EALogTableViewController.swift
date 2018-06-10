@@ -28,30 +28,31 @@ class EALogTableViewController: UITableViewController {
 
     func makeTableData() {
         
-        
-        let calendar = Calendar.current
-        var dayArray = [EALogEntry]()
-        var previousEntry = EALogEntry()
         self.tableData.removeAll()
+        var dayArray = [EALogEntry]()
+
+//        let calendar = Calendar.current
+//        var previousEntry = EALogEntry()
         for logEntry in EALog.sharedLog.entries {
-            if dayArray.count != 0 {
-                let previousDay = calendar.component(.day, from: previousEntry.start)
-                let thisDay = calendar.component(.day, from: logEntry.start)
-                if previousDay != thisDay {
-                    let previousMidnight = calendar.startOfDay(for: previousEntry.start)
-                    let logEntryMidnight = calendar.startOfDay(for: logEntry.start)
-                    let difference = calendar.dateComponents([.day], from: logEntryMidnight, to: previousMidnight)
-                    if let days = difference.day {
+//           if dayArray.count != 0 {
+//                let previousDay = calendar.component(.day, from: previousEntry.start)
+//                let thisDay = calendar.component(.day, from: logEntry.start)
+//                if previousDay != thisDay {
+//                    let previousMidnight = calendar.startOfDay(for: previousEntry.start)
+//                    let logEntryMidnight = calendar.startOfDay(for: logEntry.start)
+//                    let difference = calendar.dateComponents([.day], from: logEntryMidnight, to: previousMidnight)
+//                    if let days = difference.day {
 //                        if days > 1 {
 //                            dayArray.append(P9SlogEntry(date: logEntry.date, exersises: "\(days - 1) Day Gap", note: "", isGap: true))
 //                        }
-                    }
-                    self.tableData.append(dayArray)
-                    dayArray.removeAll()
-                }
-            }
+//                    }
+//                    self.tableData.append(dayArray)
+//                    dayArray.removeAll()
+//                }
+//            }
+//            previousEntry = logEntry
             dayArray.append(logEntry)
-            previousEntry = logEntry
+
         }
         self.tableData.append(dayArray)
         self.flatIndexs.removeAll()
